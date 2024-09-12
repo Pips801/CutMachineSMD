@@ -8,7 +8,7 @@
 #include "Assets.h" // Library of Images and Bitmaps
 #include "Actions.h" // Library of most machine actions
 
-#define version "1.0.5" // Several Updates
+#define version "1.0.6" // Several Updates
 #define cuttype "RES" // RES or LED set for Different Types
 
 #define SCREEN_WIDTH 128
@@ -476,8 +476,12 @@ void changeSize() {
 
 void changeUnits() {
   while (true) {
-    if (readButton(BUTTON_UP) == true && setUnits < 1000) setUnits++;
-    else if (readButton(BUTTON_DOWN) == true && setUnits > 1) setUnits--;
+    if (readButton(BUTTON_UP) == true && setUnits < 1000) {
+      if (setUnits < 10) { setUnits++; } else if (setUnits >=10 && setUnits < 1000) { setUnits += 10; }
+      }
+    else if (readButton(BUTTON_DOWN) == true) {
+      if (setUnits <= 10 && setUnits > 1) { setUnits--; } else if (setUnits > 10) { setUnits -= 10; }
+    }
     //delay(100);
     if (readButton(BUTTON_SELECT) == true) break;
     display.clearDisplay();
