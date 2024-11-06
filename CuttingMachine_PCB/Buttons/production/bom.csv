@@ -1,0 +1,7 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+BACK,SW_PUSH_6mm_H4.3mm,1,BACK,
+J2,PinHeader_1x07_P2.54mm_Vertical,1,Conn_01x07_Pin,
+"R1, R2, R3, R4",1206,4,PULLUP,
+SELECT,SW_PUSH_6mm_H4.3mm,1,SELECT,
+SW3,SW_PUSH_6mm_H4.3mm,1,DOWN,
+UP,SW_PUSH_6mm_H4.3mm,1,UP,
